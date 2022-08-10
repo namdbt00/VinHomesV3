@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vinhomes Vùng 3 - Trang Quản trị Marketing Vinhomes</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/vinhomes_logo.svg">
+    <!-- Pignose Calender -->
+    <link href="../plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
+    <!-- Chartist -->
+    <link rel="stylesheet" href="../plugins/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="../plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
+    <!-- Custom Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/css-custom.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="index.html">
+                    <b class="logo-abbr"><img src="../images/vinhomes_logo.svg" alt=""> </b>
+                    <span class="logo-compact"><img src="../images/vinhomes_logo.svg" alt=""></span>
+                    <span class="brand-title">
+                        <img src="../images/vinhomes_logo.svg" alt="">
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">
+            <div class="header-content clearfix">
+
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="toggle-icon"><i class="icon-menu"></i></span>
+                    </div>
+                </div>
+                <div class="header-left">
+                    <div class="input-group icons">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-transparent border-0 pr-2 pr-sm-3" id="basic-addon1"><i
+                                    class="mdi mdi-magnify"></i></span>
+                        </div>
+                        <input type="search" class="form-control" placeholder="Search Dashboard"
+                            aria-label="Search Dashboard">
+                        <div class="drop-down   d-md-none">
+                            <form action="#">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <ul class="clearfix">
+                        <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
+                                <i class="mdi mdi-email-outline"></i>
+                                <span class="badge gradient-1 badge-pill badge-primary">3</span>
+                            </a>
+                            <div class="drop-down animated fadeIn dropdown-menu">
+                                <div class="dropdown-content-heading d-flex justify-content-between">
+                                    <span class="">3 New Messages</span>
+
+                                </div>
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li class="notification-unread">
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="images/avatar/1.jpg"
+                                                    alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-heading">Saiful Islam</div>
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="notification-unread">
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="images/avatar/2.jpg"
+                                                    alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-heading">Adam Smith</div>
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                    <div class="notification-text">Can you do me a favour?</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="images/avatar/3.jpg"
+                                                    alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-heading">Barak Obama</div>
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="images/avatar/4.jpg"
+                                                    alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-heading">Hilari Clinton</div>
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                    <div class="notification-text">Hello</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
+                                <i class="mdi mdi-bell-outline"></i>
+                                <span class="badge badge-pill gradient-2 badge-primary">3</span>
+                            </a>
+                            <div class="drop-down animated fadeIn dropdown-menu dropdown-notfication">
+                                <div class="dropdown-content-heading d-flex justify-content-between">
+                                    <span class="">2 New Notifications</span>
+
+                                </div>
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-success-lighten-2"><i
+                                                        class="icon-present"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Events near you</h6>
+                                                    <span class="notification-text">Within next 5 days</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-danger-lighten-2"><i
+                                                        class="icon-present"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Event Started</h6>
+                                                    <span class="notification-text">One hour ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-success-lighten-2"><i
+                                                        class="icon-present"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Event Ended Successfully</h6>
+                                                    <span class="notification-text">One hour ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-danger-lighten-2"><i
+                                                        class="icon-present"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Events to Join</h6>
+                                                    <span class="notification-text">After two days</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="icons dropdown d-none d-md-flex ">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Chọn dự
+                                án</button>
+
+                            <div class="drop-down dropdown-language  animated fadeIn  dropdown-menu">
+                                <div class="dropdown-content-body ">
+                                    <ul>
+                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                                                <path
+                                                    d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                                            </svg> &nbsp;<a href="javascript:void()">Dự án GrandWorld</a></li>
+                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                                                <path
+                                                    d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                                            </svg>&ensp;<a href="javascript:void()">Dự án ShopVinwonders</a></li>
+                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                                                <path
+                                                    d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                                            </svg>&ensp;<a href="javascript:void()">Dự án Vincom ShopHouse Royal
+                                                Park</a></li>
+                                        <li>
+                                            <div class="dropdown-divider"></div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                                            </svg></i>&ensp;<a href="javascript:void()">Thêm thư án</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="icons dropdown">
+                            <div class="user-img c-pointer position-relative" data-toggle="dropdown">
+                                <span class="activity active"></span>
+                                <img src="../images/1.jpg" height="40" width="40" alt="">
+                            </div>
+                            <div class="drop-down dropdown-profile   dropdown-menu">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li>
+                                            <a href="app-profile.html"><i class="icon-user"></i>
+                                                <span>Profile</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="email-inbox.html"><i class="icon-envelope-open"></i>
+                                                <span>Inbox</span>
+                                                <div class="badge gradient-3 badge-pill badge-primary">3</div>
+                                            </a>
+                                        </li>
+
+                                        <hr class="my-2">
+                                        <li>
+                                            <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock
+                                                    Screen</span></a>
+                                        </li>
+                                        <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="nk-sidebar">
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li class="nav-label">Dashboard</li>
+                    <li>
+                        <a href="vh-index.html" aria-expanded="false">
+                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Tổng quan</span>
+                        </a>
+
+                    </li>
+
+                    <li>
+                        <a href="vh-calendar.html" aria-expanded="false">
+                            <i class="icon-note menu-icon"></i><span class="nav-text">Timeline truyền thông</span>
+                        </a>
+
+                    </li>
+                    <li class="mega-menu mega-menu-sm">
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Triển khai</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./vh-tlbh.html">Sản xuất TLBH</a></li>
+                            <li><a href="./vh-truyenthong.html">Truyền thông</a></li>
+                            <li><a href="./vh-list-sk.html">Sự kiện</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-grid menu-icon"></i><span class="nav-text">Sự kiện</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./ui-accordion.html">Accordion</a></li>
+                            <li><a href="./ui-alert.html">Alert</a></li>
+                            <li><a href="./ui-badge.html">Badge</a></li>
+                            <li><a href="./ui-button.html">Button</a></li>
+                            <li><a href="./ui-button-group.html">Button Group</a></li>
+                            <li><a href="./ui-cards.html">Cards</a></li>
+                            <li><a href="./ui-carousel.html">Carousel</a></li>
+                            <li><a href="./ui-dropdown.html">Dropdown</a></li>
+                            <li><a href="./ui-list-group.html">List Group</a></li>
+                            <li><a href="./ui-media-object.html">Media Object</a></li>
+                            <li><a href="./ui-modal.html">Modal</a></li>
+                            <li><a href="./ui-pagination.html">Pagination</a></li>
+                            <li><a href="./ui-popover.html">Popover</a></li>
+                            <li><a href="./ui-progressbar.html">Progressbar</a></li>
+                            <li><a href="./ui-tab.html">Tab</a></li>
+                            <li><a href="./ui-typography.html">Typography</a></li>
+                            <!-- </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-layers menu-icon"></i><span class="nav-text">Components</span>
+                        </a>
+                        <ul aria-expanded="false"> -->
+                            <li><a href="./uc-nestedable.html">Nestedable</a></li>
+                            <li><a href="./uc-noui-slider.html">Noui Slider</a></li>
+                            <li><a href="./uc-sweetalert.html">Sweet Alert</a></li>
+                            <li><a href="./uc-toastr.html">Toastr</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-label">Báo cáo</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i> <span class="nav-text">Báo cáo nội bộ</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./chart-flot.html">Flot</a></li>
+                            <li><a href="./chart-morris.html">Morris</a></li>
+                            <li><a href="./chart-chartjs.html">Chartjs</a></li>
+                            <li><a href="./chart-chartist.html">Chartist</a></li>
+                            <li><a href="./chart-sparkline.html">Sparkline</a></li>
+                            <li><a href="./chart-peity.html">Peity</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i> <span class="nav-text">Báo cáo Đại lý</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./vh-tbc.html">Tạo báo cáo</a></li>
+                            <li><a href="./vh-bcth-admin.html">Báo cáo tổng hợp</a></li>
+                            <li><a href="./vh-list-dl.html">Danh sách đại lý</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-label">Ngân sách</li>
+
+                    <li>
+                        <a href="widgets.html" aria-expanded="false">
+                            <i class="icon-badge menu-icon"></i><span class="nav-text">Phân bổ ngân sách</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-label">Thiết lập quy trình</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-notebook menu-icon"></i><span class="nav-text">Quy Trình Sản xuất</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./page-login.html">Login</a></li>
+                            <li><a href="./page-register.html">Register</a></li>
+                            <li><a href="./page-lock.html">Lock Screen</a></li>
+                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
+                                <ul aria-expanded="false">
+                                    <li><a href="./page-error-404.html">Error 404</a></li>
+                                    <li><a href="./page-error-403.html">Error 403</a></li>
+                                    <li><a href="./page-error-400.html">Error 400</a></li>
+                                    <li><a href="./page-error-500.html">Error 500</a></li>
+                                    <li><a href="./page-error-503.html">Error 503</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="container-fluid mt-3">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body d-flex justify-content-between">
+
+                            <h3>Báo cáo tổng kết tháng</h3>
+                            <div class="d-flex">
+                                <li class="icons dropdown d-none d-md-flex mr-2">
+                                    <button type="button" class="btn btn-primary dropdown-toggle text-white"
+                                        data-toggle="dropdown">Sắp xếp: Xếp hạng</button>
+    
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-content-body">
+                                            <ul>
+                                                <li>Tên đại lý</li>
+                                                <li>Xếp hạng</li>
+                                                <li>Điểm Post SX</li>
+                                                <li>Điểm Post Reup</li>
+                                                <li>Điểm Seeding Group</li>
+                                                <li>Điểm Seeding CMT</li>
+                                                <li>Điểm Sales Viral</li>
+                                                <li>Điểm Youtube</li>
+                                                <li>Điểm Reach</li>
+                                                <li>Điểm Engage</li>
+                                                <li>Điểm Ads</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="icons dropdown d-none d-md-flex mr-2">
+                                    <button type="button" class="btn btn-success dropdown-toggle text-white"
+                                        data-toggle="dropdown">Tháng: 06</button>
+    
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-content-body">
+                                            <ul>
+                                                <li>01</li>
+                                                <li>02</li>
+                                                <li>03</li>
+                                                <li>04</li>
+                                                <li>05</li>
+                                                <li>06</li>
+                                                <li>07</li>
+                                                <li>08</li>
+                                                <li>09</li>
+                                                <li>10</li>
+                                                <li>11</li>
+                                                <li>12</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="icons dropdown d-none d-md-flex ">
+                                    <button type="button" class="btn btn-google-plus dropdown-toggle"
+                                        data-toggle="dropdown">Năm: 2022</button>
+    
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-content-body">
+                                            <ul>
+                                                <li>2022</li>
+                                                <li>2023</li>
+                                                <li>2024</li>
+                                                <li>2025</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered mb-0">
+                                    <thead>
+                                        <tr class="text-white">
+                                            <th style="background-color: #980000" class="sticky1">ĐẠI LÝ</th>
+                                            <th style="background-color: #980000">TỔNG ĐIỂM</th>
+                                            <th style="background-color: #980000">XẾP HẠNG</th>
+                                            <th colspan="3" style="background-color: #0b5394">POST TỰ SX</th>
+                                            <th colspan="3" style="background-color: #0b5394">REUP POST</th>
+                                            <th colspan="3" style="background-color: #c27ba0">SEEDING GROUP</th>
+                                            <th colspan="3" style="background-color: #c27ba0">SEEDING CMT</th>
+                                            <th colspan="3" style="background-color: #c27ba0">SALES VIRAL</th>
+                                            <th colspan="3" style="background-color: #c27ba0">YOUTUBE</th>
+                                            <th colspan="3" style="background-color: #073763">REACH</th>
+                                            <th colspan="3" style="background-color: #073763">ENGAGE</th>
+                                            <th colspan="3" style="background-color: #073763">NGÂN SÁCH CHẠY ADS</th>
+                                        </tr>
+                                        <tr class="text-white border-top-1">
+                                            <th style="background-color: #980000" class="sticky1"></th>
+                                            <th style="background-color: #980000"></th>
+                                            <th style="background-color: #980000"></th>
+                                            <th style="background-color: #0b5394">SỐ LƯỢNG</th>
+                                            <th style="background-color: #0b5394">KPI</th>
+                                            <th style="background-color: #0b5394">SỐ ĐIỂM</th>
+                                            <th style="background-color: #0b5394">SỐ LƯỢNG</th>
+                                            <th style="background-color: #0b5394">KPI</th>
+                                            <th style="background-color: #0b5394">SỐ ĐIỂM</th>
+                                            <th style="background-color: #c27ba0">SỐ LƯỢNG</th>
+                                            <th style="background-color: #c27ba0">KPI</th>
+                                            <th style="background-color: #c27ba0">SỐ ĐIỂM</th>
+                                            <th style="background-color: #c27ba0">SỐ LƯỢNG</th>
+                                            <th style="background-color: #c27ba0">KPI</th>
+                                            <th style="background-color: #c27ba0">SỐ ĐIỂM</th>
+                                            <th style="background-color: #c27ba0">SỐ LƯỢNG</th>
+                                            <th style="background-color: #c27ba0">KPI</th>
+                                            <th style="background-color: #c27ba0">SỐ ĐIỂM</th>
+                                            <th style="background-color: #c27ba0">SỐ LƯỢNG</th>
+                                            <th style="background-color: #c27ba0">KPI</th>
+                                            <th style="background-color: #c27ba0">SỐ ĐIỂM</th>
+                                            <th style="background-color: #073763">SỐ LƯỢNG</th>
+                                            <th style="background-color: #073763">KPI</th>
+                                            <th style="background-color: #073763">SỐ ĐIỂM</th>
+                                            <th style="background-color: #073763">SỐ LƯỢNG</th>
+                                            <th style="background-color: #073763">KPI</th>
+                                            <th style="background-color: #073763">SỐ ĐIỂM</th>
+                                            <th style="background-color: #073763">SỐ LƯỢNG</th>
+                                            <th style="background-color: #073763">KPI</th>
+                                            <th style="background-color: #073763">SỐ ĐIỂM</th>
+                                        </tr>
+                                        <tr>
+                                            <th style="background-color: yellow" class="sticky1"><h5>Tổng</h5></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"><h5>98</h5></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"><h5>506</h5></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"><h5>10.834</h5></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"><h5>17.837</h5></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"><h5>3.329</h5></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"><h5>123</h5></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"><h5>12.081.874</h5></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"><h5>662.921</h5></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"><h5>422.488.052</h5></th>
+                                            <th style="background-color: yellow"></th>
+                                            <th style="background-color: yellow"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr onclick="window.open('vh-bcdl-viral.html');" style="cursor: pointer">
+                                            <td class="ranking-item sticky1">BHOMES</td>
+                                            <td class="ranking-item">8,59</td>
+                                            <td class="ranking-item">1</td>
+                                            <td>9</td>
+                                            <td class="rating-field">113%</td>
+                                            <td>1,00</td>
+                                            <td>33</td>
+                                            <td class="rating-field">98%</td>
+                                            <td>0,98</td>
+                                            <td>3,259</td>
+                                            <td class="rating-field">407%</td>                                                            
+                                            <td>1,00</td>
+                                            <td>1,873</td>
+                                            <td class="rating-field">112%</td>
+                                            <td>1,00</td>
+                                            <td>503</td>
+                                            <td class="rating-field">76%</td>
+                                            <td>0,76</td>
+                                            <td>15</td>
+                                            <td class="rating-field">96%</td>
+                                            <td>0,96</td>
+                                            <td>88,810</td>
+                                            <td class="rating-field">18%</td>
+                                            <td>0,18</td>
+                                            <td>25,175</td>
+                                            <td class="rating-field">252%</td>
+                                            <td>1,00</td>
+                                            <td>17,132,001</td>
+                                            <td class="rating-field">86%</td>
+                                            <td>1,71</td>
+                                        </tr>
+                                        <tr onclick="window.open('vh-bcdl-viral.html');" style="cursor: pointer">
+                                            <td class="ranking-item sticky1">STH</td>
+                                            <td class="ranking-item">8,59</td>
+                                            <td class="ranking-item">2</td>
+                                            <td>9</td>
+                                            <td class="rating-field">113%</td>
+                                            <td>1,00</td>
+                                            <td>33</td>
+                                            <td class="rating-field">98%</td>
+                                            <td>0,98</td>
+                                            <td>3,259</td>
+                                            <td class="rating-field">407%</td>                                                            
+                                            <td>1,00</td>
+                                            <td>1,873</td>
+                                            <td class="rating-field">112%</td>
+                                            <td>1,00</td>
+                                            <td>503</td>
+                                            <td class="rating-field">76%</td>
+                                            <td>0,76</td>
+                                            <td>15</td>
+                                            <td class="rating-field">96%</td>
+                                            <td>0,96</td>
+                                            <td>88,810</td>
+                                            <td class="rating-field">18%</td>
+                                            <td>0,18</td>
+                                            <td>25,175</td>
+                                            <td class="rating-field">252%</td>
+                                            <td>1,00</td>
+                                            <td>17,132,001</td>
+                                            <td class="rating-field">86%</td>
+                                            <td>1,71</td>
+                                        </tr>
+                                        <tr onclick="window.open('vh-bcdl-viral.html');" style="cursor: pointer">
+                                            <td class="ranking-item sticky1">ĐẤT VIỆT</td>
+                                            <td class="ranking-item">8,59</td>
+                                            <td class="ranking-item">3</td>
+                                            <td>9</td>
+                                            <td class="rating-field">113%</td>
+                                            <td>1,00</td>
+                                            <td>33</td>
+                                            <td class="rating-field">98%</td>
+                                            <td>0,98</td>
+                                            <td>3,259</td>
+                                            <td class="rating-field">407%</td>                                                            
+                                            <td>1,00</td>
+                                            <td>1,873</td>
+                                            <td class="rating-field">112%</td>
+                                            <td>1,00</td>
+                                            <td>503</td>
+                                            <td class="rating-field">76%</td>
+                                            <td>0,76</td>
+                                            <td>15</td>
+                                            <td class="rating-field">96%</td>
+                                            <td>0,96</td>
+                                            <td>88,810</td>
+                                            <td class="rating-field">18%</td>
+                                            <td>0,18</td>
+                                            <td>25,175</td>
+                                            <td class="rating-field">252%</td>
+                                            <td>1,00</td>
+                                            <td>17,132,001</td>
+                                            <td class="rating-field">86%</td>
+                                            <td>1,71</td>
+                                        </tr>
+                                        <tr onclick="window.open('vh-bcdl-viral.html');" style="cursor: pointer">
+                                            <td class="ranking-item sticky1">ALPHAREAL</td>
+                                            <td class="ranking-item">8,59</td>
+                                            <td class="ranking-item">4</td>
+                                            <td>9</td>
+                                            <td class="rating-field">113%</td>
+                                            <td>1,00</td>
+                                            <td>33</td>
+                                            <td class="rating-field">98%</td>
+                                            <td>0,98</td>
+                                            <td>3,259</td>
+                                            <td class="rating-field">407%</td>                                                            
+                                            <td>1,00</td>
+                                            <td>1,873</td>
+                                            <td class="rating-field">112%</td>
+                                            <td>1,00</td>
+                                            <td>503</td>
+                                            <td class="rating-field">76%</td>
+                                            <td>0,76</td>
+                                            <td>15</td>
+                                            <td class="rating-field">96%</td>
+                                            <td>0,96</td>
+                                            <td>88,810</td>
+                                            <td class="rating-field">18%</td>
+                                            <td>0,18</td>
+                                            <td>25,175</td>
+                                            <td class="rating-field">252%</td>
+                                            <td>1,00</td>
+                                            <td>17,132,001</td>
+                                            <td class="rating-field">86%</td>
+                                            <td>1,71</td>
+                                        </tr>
+                                        <tr onclick="window.open('vh-bcdl-viral.html');" style="cursor: pointer">
+                                            <td class="ranking-item sticky1">ALPHAREAL</td>
+                                            <td class="ranking-item">8,59</td>
+                                            <td class="ranking-item">5</td>
+                                            <td>9</td>
+                                            <td class="rating-field">113%</td>
+                                            <td>1,00</td>
+                                            <td>33</td>
+                                            <td class="rating-field">98%</td>
+                                            <td>0,98</td>
+                                            <td>3,259</td>
+                                            <td class="rating-field">407%</td>                                                            
+                                            <td>1,00</td>
+                                            <td>1,873</td>
+                                            <td class="rating-field">112%</td>
+                                            <td>1,00</td>
+                                            <td>503</td>
+                                            <td class="rating-field">76%</td>
+                                            <td>0,76</td>
+                                            <td>15</td>
+                                            <td class="rating-field">96%</td>
+                                            <td>0,96</td>
+                                            <td>88,810</td>
+                                            <td class="rating-field">18%</td>
+                                            <td>0,18</td>
+                                            <td>25,175</td>
+                                            <td class="rating-field">252%</td>
+                                            <td>1,00</td>
+                                            <td>17,132,001</td>
+                                            <td class="rating-field">86%</td>
+                                            <td>1,71</td>
+                                        </tr>
+                                        <tr onclick="window.open('vh-bcdl-viral.html');" style="cursor: pointer">
+                                            <td class="ranking-item sticky1">ALPHAREAL</td>
+                                            <td class="ranking-item">8,59</td>
+                                            <td class="ranking-item">6</td>
+                                            <td>9</td>
+                                            <td class="rating-field">113%</td>
+                                            <td>1,00</td>
+                                            <td>33</td>
+                                            <td class="rating-field">98%</td>
+                                            <td>0,98</td>
+                                            <td>3,259</td>
+                                            <td class="rating-field">407%</td>                                                            
+                                            <td>1,00</td>
+                                            <td>1,873</td>
+                                            <td class="rating-field">112%</td>
+                                            <td>1,00</td>
+                                            <td>503</td>
+                                            <td class="rating-field">76%</td>
+                                            <td>0,76</td>
+                                            <td>15</td>
+                                            <td class="rating-field">96%</td>
+                                            <td>0,96</td>
+                                            <td>88,810</td>
+                                            <td class="rating-field">18%</td>
+                                            <td>0,18</td>
+                                            <td>25,175</td>
+                                            <td class="rating-field">252%</td>
+                                            <td>1,00</td>
+                                            <td>17,132,001</td>
+                                            <td class="rating-field">86%</td>
+                                            <td>1,71</td>
+                                        </tr>
+                                        <tr onclick="window.open('vh-bcdl-viral.html');" style="cursor: pointer">
+                                            <td class="ranking-item sticky1">ALPHAREAL</td>
+                                            <td class="ranking-item">8,59</td>
+                                            <td class="ranking-item">7</td>
+                                            <td>9</td>
+                                            <td class="rating-field">113%</td>
+                                            <td>1,00</td>
+                                            <td>33</td>
+                                            <td class="rating-field">98%</td>
+                                            <td>0,98</td>
+                                            <td>3,259</td>
+                                            <td class="rating-field">407%</td>                                                            
+                                            <td>1,00</td>
+                                            <td>1,873</td>
+                                            <td class="rating-field">112%</td>
+                                            <td>1,00</td>
+                                            <td>503</td>
+                                            <td class="rating-field">76%</td>
+                                            <td>0,76</td>
+                                            <td>15</td>
+                                            <td class="rating-field">96%</td>
+                                            <td>0,96</td>
+                                            <td>88,810</td>
+                                            <td class="rating-field">18%</td>
+                                            <td>0,18</td>
+                                            <td>25,175</td>
+                                            <td class="rating-field">252%</td>
+                                            <td>1,00</td>
+                                            <td>17,132,001</td>
+                                            <td class="rating-field">86%</td>
+                                            <td>1,71</td>
+                                        </tr>
+                                        <tr onclick="window.open('vh-bcdl-viral.html');" style="cursor: pointer">
+                                            <td class="ranking-item sticky1">ALPHAREAL</td>
+                                            <td class="ranking-item">8,59</td>
+                                            <td class="ranking-item">8</td>
+                                            <td>9</td>
+                                            <td class="rating-field">113%</td>
+                                            <td>1,00</td>
+                                            <td>33</td>
+                                            <td class="rating-field">98%</td>
+                                            <td>0,98</td>
+                                            <td>3,259</td>
+                                            <td class="rating-field">407%</td>                                                            
+                                            <td>1,00</td>
+                                            <td>1,873</td>
+                                            <td class="rating-field">112%</td>
+                                            <td>1,00</td>
+                                            <td>503</td>
+                                            <td class="rating-field">76%</td>
+                                            <td>0,76</td>
+                                            <td>15</td>
+                                            <td class="rating-field">96%</td>
+                                            <td>0,96</td>
+                                            <td>88,810</td>
+                                            <td class="rating-field">18%</td>
+                                            <td>0,18</td>
+                                            <td>25,175</td>
+                                            <td class="rating-field">252%</td>
+                                            <td>1,00</td>
+                                            <td>17,132,001</td>
+                                            <td class="rating-field">86%</td>
+                                            <td>1,71</td>
+                                        </tr>
+                                        <tr onclick="window.open('vh-bcdl-viral.html');" style="cursor: pointer">
+                                            <td class="ranking-item sticky1">ALPHAREAL</td>
+                                            <td class="ranking-item">8,59</td>
+                                            <td class="ranking-item">9</td>
+                                            <td>9</td>
+                                            <td class="rating-field">113%</td>
+                                            <td>1,00</td>
+                                            <td>33</td>
+                                            <td class="rating-field">98%</td>
+                                            <td>0,98</td>
+                                            <td>3,259</td>
+                                            <td class="rating-field">407%</td>                                                            
+                                            <td>1,00</td>
+                                            <td>1,873</td>
+                                            <td class="rating-field">112%</td>
+                                            <td>1,00</td>
+                                            <td>503</td>
+                                            <td class="rating-field">76%</td>
+                                            <td>0,76</td>
+                                            <td>15</td>
+                                            <td class="rating-field">96%</td>
+                                            <td>0,96</td>
+                                            <td>88,810</td>
+                                            <td class="rating-field">18%</td>
+                                            <td>0,18</td>
+                                            <td>25,175</td>
+                                            <td class="rating-field">252%</td>
+                                            <td>1,00</td>
+                                            <td>17,132,001</td>
+                                            <td class="rating-field">86%</td>
+                                            <td>1,71</td>
+                                        </tr>
+                                        <tr onclick="window.open('vh-bcdl-viral.html');" style="cursor: pointer">
+                                            <td class="ranking-item sticky1">ALPHAREAL</td>
+                                            <td class="ranking-item">8,59</td>
+                                            <td class="ranking-item">10</td>
+                                            <td>9</td>
+                                            <td class="rating-field">113%</td>
+                                            <td>1,00</td>
+                                            <td>33</td>
+                                            <td class="rating-field">98%</td>
+                                            <td>0,98</td>
+                                            <td>3,259</td>
+                                            <td class="rating-field">407%</td>                                                            
+                                            <td>1,00</td>
+                                            <td>1,873</td>
+                                            <td class="rating-field">112%</td>
+                                            <td>1,00</td>
+                                            <td>503</td>
+                                            <td class="rating-field">76%</td>
+                                            <td>0,76</td>
+                                            <td>15</td>
+                                            <td class="rating-field">96%</td>
+                                            <td>0,96</td>
+                                            <td>88,810</td>
+                                            <td class="rating-field">18%</td>
+                                            <td>0,18</td>
+                                            <td>25,175</td>
+                                            <td class="rating-field">252%</td>
+                                            <td>1,00</td>
+                                            <td>17,132,001</td>
+                                            <td class="rating-field">86%</td>
+                                            <td>1,71</td>
+                                        </tr>
+                                        <tr onclick="window.open('vh-bcdl-viral.html');" style="cursor: pointer">
+                                            <td class="ranking-item sticky1">ALPHAREAL</td>
+                                            <td class="ranking-item">8,59</td>
+                                            <td class="ranking-item">11</td>
+                                            <td>9</td>
+                                            <td class="rating-field">113%</td>
+                                            <td>1,00</td>
+                                            <td>33</td>
+                                            <td class="rating-field">98%</td>
+                                            <td>0,98</td>
+                                            <td>3,259</td>
+                                            <td class="rating-field">407%</td>                                                            
+                                            <td>1,00</td>
+                                            <td>1,873</td>
+                                            <td class="rating-field">112%</td>
+                                            <td>1,00</td>
+                                            <td>503</td>
+                                            <td class="rating-field">76%</td>
+                                            <td>0,76</td>
+                                            <td>15</td>
+                                            <td class="rating-field">96%</td>
+                                            <td>0,96</td>
+                                            <td>88,810</td>
+                                            <td class="rating-field">18%</td>
+                                            <td>0,18</td>
+                                            <td>25,175</td>
+                                            <td class="rating-field">252%</td>
+                                            <td>1,00</td>
+                                            <td>17,132,001</td>
+                                            <td class="rating-field">86%</td>
+                                            <td>1,71</td>
+                                        </tr>
+                                        <tr onclick="window.open('vh-bcdl-viral.html');" style="cursor: pointer">
+                                            <td class="ranking-item sticky1">ALPHAREAL</td>
+                                            <td class="ranking-item">8,59</td>
+                                            <td class="ranking-item">12</td>
+                                            <td>9</td>
+                                            <td class="rating-field">113%</td>
+                                            <td>1,00</td>
+                                            <td>33</td>
+                                            <td class="rating-field">98%</td>
+                                            <td>0,98</td>
+                                            <td>3,259</td>
+                                            <td class="rating-field">407%</td>                                                            
+                                            <td>1,00</td>
+                                            <td>1,873</td>
+                                            <td class="rating-field">112%</td>
+                                            <td>1,00</td>
+                                            <td>503</td>
+                                            <td class="rating-field">76%</td>
+                                            <td>0,76</td>
+                                            <td>15</td>
+                                            <td class="rating-field">96%</td>
+                                            <td>0,96</td>
+                                            <td>88,810</td>
+                                            <td class="rating-field">18%</td>
+                                            <td>0,18</td>
+                                            <td>25,175</td>
+                                            <td class="rating-field">252%</td>
+                                            <td>1,00</td>
+                                            <td>17,132,001</td>
+                                            <td class="rating-field">86%</td>
+                                            <td>1,71</td>
+                                        </tr>
+                                        <tr onclick="window.open('vh-bcdl-viral.html');" style="cursor: pointer">
+                                            <td class="ranking-item sticky1">ALPHAREAL</td>
+                                            <td class="ranking-item">8,59</td>
+                                            <td class="ranking-item">13</td>
+                                            <td>9</td>
+                                            <td class="rating-field">113%</td>
+                                            <td>1,00</td>
+                                            <td>33</td>
+                                            <td class="rating-field">98%</td>
+                                            <td>0,98</td>
+                                            <td>3,259</td>
+                                            <td class="rating-field">407%</td>                                                            
+                                            <td>1,00</td>
+                                            <td>1,873</td>
+                                            <td class="rating-field">112%</td>
+                                            <td>1,00</td>
+                                            <td>503</td>
+                                            <td class="rating-field">76%</td>
+                                            <td>0,76</td>
+                                            <td>15</td>
+                                            <td class="rating-field">96%</td>
+                                            <td>0,96</td>
+                                            <td>88,810</td>
+                                            <td class="rating-field">18%</td>
+                                            <td>0,18</td>
+                                            <td>25,175</td>
+                                            <td class="rating-field">252%</td>
+                                            <td>1,00</td>
+                                            <td>17,132,001</td>
+                                            <td class="rating-field">86%</td>
+                                            <td>1,71</td>
+                                        </tr>
+                                        <tr onclick="window.open('vh-bcdl-viral.html');" style="cursor: pointer">
+                                            <td class="ranking-item sticky1">ALPHAREAL</td>
+                                            <td class="ranking-item">8,59</td>
+                                            <td class="ranking-item">14</td>
+                                            <td>9</td>
+                                            <td class="rating-field">113%</td>
+                                            <td>1,00</td>
+                                            <td>33</td>
+                                            <td class="rating-field">98%</td>
+                                            <td>0,98</td>
+                                            <td>3,259</td>
+                                            <td class="rating-field">407%</td>                                                            
+                                            <td>1,00</td>
+                                            <td>1,873</td>
+                                            <td class="rating-field">112%</td>
+                                            <td>1,00</td>
+                                            <td>503</td>
+                                            <td class="rating-field">76%</td>
+                                            <td>0,76</td>
+                                            <td>15</td>
+                                            <td class="rating-field">96%</td>
+                                            <td>0,96</td>
+                                            <td>88,810</td>
+                                            <td class="rating-field">18%</td>
+                                            <td>0,18</td>
+                                            <td>25,175</td>
+                                            <td class="rating-field">252%</td>
+                                            <td>1,00</td>
+                                            <td>17,132,001</td>
+                                            <td class="rating-field">86%</td>
+                                            <td>1,71</td>
+                                        </tr>
+                                        <tr onclick="window.open('vh-bcdl-viral.html');" style="cursor: pointer">
+                                            <td class="ranking-item sticky1">ALPHAREAL</td>
+                                            <td class="ranking-item">8,59</td>
+                                            <td class="ranking-item">15</td>
+                                            <td>9</td>
+                                            <td class="rating-field">113%</td>
+                                            <td>1,00</td>
+                                            <td>33</td>
+                                            <td class="rating-field">98%</td>
+                                            <td>0,98</td>
+                                            <td>3,259</td>
+                                            <td class="rating-field">407%</td>                                                            
+                                            <td>1,00</td>
+                                            <td>1,873</td>
+                                            <td class="rating-field">112%</td>
+                                            <td>1,00</td>
+                                            <td>503</td>
+                                            <td class="rating-field">76%</td>
+                                            <td>0,76</td>
+                                            <td>15</td>
+                                            <td class="rating-field">96%</td>
+                                            <td>0,96</td>
+                                            <td>88,810</td>
+                                            <td class="rating-field">18%</td>
+                                            <td>0,18</td>
+                                            <td>25,175</td>
+                                            <td class="rating-field">252%</td>
+                                            <td>1,00</td>
+                                            <td>17,132,001</td>
+                                            <td class="rating-field">86%</td>
+                                            <td>1,71</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--**********************************
+            Content body end
+        ***********************************-->
+
+
+    <!--**********************************
+            Footer start
+        ***********************************-->
+    <div class="footer">
+        <div class="copyright">
+            <p>Copyright &copy; Designed & Developed by <a href="https://tailieuvinhomes.com/" target="blank">Vinhomes
+                    Vùng 3 </a> 2022
+            </p>
+        </div>
+    </div>
+    <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+
+    <!--**********************************
+        Modal wrapper start
+    ***********************************-->
+
+    <!-- Modal confirm delete -->
+    <div class="modal fade delete-modal">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thông báo</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">Bạn có chắc muốn xoá mục này?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Xoá</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script>
+
+
+
+
+        // Set màu label %
+        $(document).ready(function () {
+            var rateField = $(".rating-field");
+            for (i = 0; i < rateField.length; i++) {
+                $(rateField[i]).css("color", "black");
+                var text = $(rateField[i]).html();
+                var rateFieldInt = parseInt(text.substring(0, text.length-1));
+                if (rateFieldInt < 50) {
+                    $(rateField[i]).addClass("bg-danger");
+                } else if (rateFieldInt >= 50 && rateFieldInt <= 70) {
+                    $(rateField[i]).addClass("bg-warning");
+                } else {
+                    $(rateField[i]).addClass("bg-success");
+                }
+            }
+        });
+
+        // Set màu text
+        $(document).ready(function () {
+            var rateFieldStr = $(".rating-field-str");
+            for (i = 0; i < rateFieldStr.length; i++) {
+                $(rateFieldStr[i]).css("color", "black");
+                var text = $(rateFieldStr[i]).html();
+                if (text == 'Chưa hiệu quả') {
+                    $(rateFieldStr[i]).addClass("bg-danger");
+                } else if (text == 'Hiệu quả TB') {
+                    $(rateFieldStr[i]).addClass("bg-warning");
+                } else if (text == 'Hiệu quả tốt'){
+                    $(rateFieldStr[i]).addClass("bg-success");
+                }
+            }
+        });
+
+        // Set màu ranking
+        $(document).ready(function () {
+            var rankingItem = $(".ranking-item");
+            for (i = 0; i < rankingItem.length; i++) {
+                $(rankingItem[i]).css("color", "black");
+                if (i < 15) {
+                    $(rankingItem[i]).addClass("bg-success");
+                } else if (i>=15 && i<30) {
+                    $(rankingItem[i]).addClass("bg-warning");
+                } else {
+                    $(rankingItem[i]).addClass("bg-danger");
+                }
+            }
+        });
+
+
+    </script>
+
+    <script src="../plugins/common/common.min.js"></script>
+    <script src="../js/custom.min.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/gleek.js"></script>
+    <script src="../js/styleSwitcher.js"></script>
+
+    <!-- Chartjs -->
+    <script src="../plugins/chart.js/Chart.bundle.min.js"></script>
+    <!-- Circle pr.ogress -->
+    <script src="../plugins/circle-progress/circle-progress.min.js"></script>
+    <!-- Morrisjs .-->
+    <script src="../plugins/raphael/raphael.min.js"></script>
+    <script src="../plugins/morris/morris.min.js"></script>
+    <!-- Pignose C.alender -->
+    <script src="../plugins/moment/moment.min.js"></script>
+    <script src="../plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+    <!-- ChartistJ.S -->
+    <script src="../plugins/chartist/js/chartist.min.js"></script>
+    <script src="../plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+
+    <script src="../js/dashboard/dashboard-1.js"></script>
+</body>
+
+</html>

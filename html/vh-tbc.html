@@ -18,6 +18,7 @@
     <link href="../css/css-custom.css" rel="stylesheet">
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
 
 </head>
 
@@ -418,272 +419,163 @@
         <div class="content-body">
 
             <div class="container-fluid mt-3">
-                <div class="card">
-                    <div class="card-body">
-                        <h4>Chiến dịch Ra mắt Palma</h4>
-                    </div>
-                </div>
-            </div>
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body d-flex justify-content-between">
 
-            <div class="container-fluid" style="padding-top: 0;">
-                <div class="card">
-                    <div class="card-header">
-                        <div data-toggle="collapse" data-target="#sxsk" aria-expanded="false" aria-controls="sxsk">
-                            <div class="card-title d-flex justify-content-between">
-                                <h4 class="mt-1">Sản xuất sự kiện</h4>
-                                <div class="progress ml-2" style="height: 30px; width: 200px">
-                                    <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="80"
-                                        aria-valuemin="0" aria-valuemax="100" style="font-size: 14px"></div>
-                                </div>
-                            </div>
+                            <h3>Danh sách Báo cáo</h3>
+                            <button type="button" class="btn btn-warning col-sm-8 col-md-4 col-lg-2" href=""
+                                data-toggle="modal" data-target=".add-modal">
+                                Tạo báo cáo mới<span class="btn-icon-right"><i class="bi bi-plus-circle-fill">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                            <path
+                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                        </svg></i></span>
+                            </button>
+                            
                         </div>
                     </div>
 
-                    <div class="card-body collapse show border-top-1" id="sxsk">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <!-- <div class ="card-header">
-                                <h4>Header</h3>
-                            </div> -->
-                                    <div class="card-body">
-                                        <div data-toggle="collapse" data-target="#setup" aria-expanded="false"
-                                            aria-controls="setup">
-                                            <div class="card-title d-flex justify-content-between">
-                                                <h4>Set up</h4>
-                                                <div class="progress ml-2" style="height: 30px; width: 200px">
-                                                    <div class="progress-bar progress-bar-striped" role="progressbar"
-                                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                                        style="font-size: 14px"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="todo-list collapse show border-top-1" id="setup">
-                                            <div class="tdl-holder">
-                                                <div class="tdl-content">
-                                                    <ul id="todo_list">
-                                                        <li><label><input type="checkbox"><i></i><span>Get up</span><a
-                                                                    href='#' class="ti-close"></a></label></li>
-                                                        <li><label><input type="checkbox" checked><i></i><span>Stand
-                                                                    up</span><a href='#' class="ti-close"></a></label>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="px-4">
-                                                    <input type="text" class="tdl-new form-control"
-                                                        placeholder="Nhập mục mới và gõ 'Enter'">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive border-top-1">
+                                <table class="table table-bordered mb-0">
+                                    <thead>
+                                        <tr style="background-color: #073763; color: white;">
+                                            <th>STT</th>
+                                            <th>TÊN BÁO CÁO</th>
+                                            <th>NGÀY BẮT ĐẦU</th>
+                                            <th>NGÀY KẾT THÚC</th>
+                                            <th>SỐ POST</th>
+                                            <th>SỐ CLIP</th>
+                                            <th>LINK POST & CLIP</th>
+                                            <th>GHI CHÚ</th>
+                                            <th>NGÀY TẠO</th>
+                                            <th>HẠN BÁO CÁO</th>
+                                            <th>THAO TÁC</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>PQ Tuần 2 Tháng 7</td>
+                                            <td>12/07/2022</td>
+                                            <td>18/07/2022</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td style="text-overflow: ellipsis; overflow:hidden" data-toggle="tooltip" data-placement="right" title="https://docs.google.com/spreadsheets/d/1gGwtoQxWUsbPNknfVJltXA80jpYBylNjkUIfpJOF7wY/edit#gid=954885540">
+                                                <a target="blank"
+                                                href="https://docs.google.com/spreadsheets/d/1gGwtoQxWUsbPNknfVJltXA80jpYBylNjkUIfpJOF7wY/edit#gid=954885540">https://docs.google.com/spreadsheets/d/1gGwtoQxWUsbPNknfVJltXA80jpYBylNjkUIfpJOF7wY/edit#gid=954885540</a></td>                                            <td>abc</td>
+                                            <td>19/07/2022 10:30</td>
+                                            <td>21/07/2022 23:00</td>
+                                            <td><span data-toggle="modal"
+                                                data-target=".view-modal">
+                                                <button type="button"
+                                                    class="btn btn-google"
+                                                    data-toggle="tooltip"
+                                                    data-placement="top"
+                                                    title="Xem"><i
+                                                        class="fa fa-eye"></i></button></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>PQ Tuần 2 Tháng 7</td>
+                                            <td>12/07/2022</td>
+                                            <td>18/07/2022</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td style="text-overflow: ellipsis; overflow:hidden" data-toggle="tooltip" data-placement="right" title="https://docs.google.com/spreadsheets/d/1gGwtoQxWUsbPNknfVJltXA80jpYBylNjkUIfpJOF7wY/edit#gid=954885540">
+                                                <a target="blank"
+                                                href="https://docs.google.com/spreadsheets/d/1gGwtoQxWUsbPNknfVJltXA80jpYBylNjkUIfpJOF7wY/edit#gid=954885540">https://docs.google.com/spreadsheets/d/1gGwtoQxWUsbPNknfVJltXA80jpYBylNjkUIfpJOF7wY/edit#gid=954885540</a></td>
+                                            <td>abc</td>
+                                            <td>19/07/2022 10:30</td>
+                                            <td>21/07/2022 23:00</td>
+                                            <td><span data-toggle="modal"
+                                                data-target=".view-modal">
+                                                <button type="button"
+                                                    class="btn btn-google"
+                                                    data-toggle="tooltip"
+                                                    data-placement="top"
+                                                    title="Xem"><i
+                                                        class="fa fa-eye"></i></button></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>PQ Tuần 2 Tháng 7</td>
+                                            <td>12/07/2022</td>
+                                            <td>18/07/2022</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td style="text-overflow: ellipsis; overflow:hidden" data-toggle="tooltip" data-placement="right" title="https://docs.google.com/spreadsheets/d/1gGwtoQxWUsbPNknfVJltXA80jpYBylNjkUIfpJOF7wY/edit#gid=954885540">
+                                                <a target="blank"
+                                                href="https://docs.google.com/spreadsheets/d/1gGwtoQxWUsbPNknfVJltXA80jpYBylNjkUIfpJOF7wY/edit#gid=954885540">https://docs.google.com/spreadsheets/d/1gGwtoQxWUsbPNknfVJltXA80jpYBylNjkUIfpJOF7wY/edit#gid=954885540</a></td>                                            
+                                            <td>abc</td>
+                                            <td>19/07/2022 10:30</td>
+                                            <td>21/07/2022 23:00</td>
+                                            <td><span data-toggle="modal"
+                                                data-target=".view-modal">
+                                                <button type="button"
+                                                    class="btn btn-google"
+                                                    data-toggle="tooltip"
+                                                    data-placement="top"
+                                                    title="Xem"><i
+                                                        class="fa fa-eye"></i></button></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>PQ Tuần 2 Tháng 7</td>
+                                            <td>12/07/2022</td>
+                                            <td>18/07/2022</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td style="text-overflow: ellipsis; overflow:hidden" data-toggle="tooltip" data-placement="right" title="https://docs.google.com/spreadsheets/d/1gGwtoQxWUsbPNknfVJltXA80jpYBylNjkUIfpJOF7wY/edit#gid=954885540">
+                                                <a target="blank"
+                                                href="https://docs.google.com/spreadsheets/d/1gGwtoQxWUsbPNknfVJltXA80jpYBylNjkUIfpJOF7wY/edit#gid=954885540">https://docs.google.com/spreadsheets/d/1gGwtoQxWUsbPNknfVJltXA80jpYBylNjkUIfpJOF7wY/edit#gid=954885540</a></td>                                            
+                                            <td>abc</td>
+                                            <td>19/07/2022 10:30</td>
+                                            <td>21/07/2022 23:00</td>
+                                            <td><span data-toggle="modal"
+                                                data-target=".view-modal">
+                                                <button type="button"
+                                                    class="btn btn-google"
+                                                    data-toggle="tooltip"
+                                                    data-placement="top"
+                                                    title="Xem"><i
+                                                        class="fa fa-eye"></i></button></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>PQ Tuần 2 Tháng 7</td>
+                                            <td>12/07/2022</td>
+                                            <td>18/07/2022</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td style="text-overflow: ellipsis; overflow:hidden" data-toggle="tooltip" data-placement="right" title="https://docs.google.com/spreadsheets/d/1gGwtoQxWUsbPNknfVJltXA80jpYBylNjkUIfpJOF7wY/edit#gid=954885540">
+                                                <a target="blank"
+                                                href="https://docs.google.com/spreadsheets/d/1gGwtoQxWUsbPNknfVJltXA80jpYBylNjkUIfpJOF7wY/edit#gid=954885540">https://docs.google.com/spreadsheets/d/1gGwtoQxWUsbPNknfVJltXA80jpYBylNjkUIfpJOF7wY/edit#gid=954885540</a></td>                                            
+                                            <td>abc</td>
+                                            <td>19/07/2022 10:30</td>
+                                            <td>21/07/2022 23:00</td>
+                                            <td><span data-toggle="modal"
+                                                data-target=".view-modal">
+                                                <button type="button"
+                                                    class="btn btn-google"
+                                                    data-toggle="tooltip"
+                                                    data-placement="top"
+                                                    title="Xem"><i
+                                                        class="fa fa-eye"></i></button></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <!-- <div class ="card-header">
-                                <h4>Header</h3>
-                            </div> -->
-                                    <div class="card-body">
-                                        <div data-toggle="collapse" data-target="#content" aria-expanded="false"
-                                            aria-controls="content">
-                                            <div class="card-title d-flex justify-content-between">
-                                                <h4>Nội dung</h4>
-                                                <div class="progress ml-2" style="height: 30px; width: 200px">
-                                                    <div class="progress-bar progress-bar-striped" role="progressbar"
-                                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                                        style="font-size: 14px"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="todo-list collapse show border-top-1" id="content">
-                                            <div class="tdl-holder">
-                                                <div class="tdl-content">
-                                                    <ul id="todo_list">
-                                                        <li><label><input type="checkbox"><i></i><span>Get up</span><a
-                                                                    href='#' class="ti-close"></a></label></li>
-                                                        <li><label><input type="checkbox" checked><i></i><span>Stand
-                                                                    up</span><a href='#' class="ti-close"></a></label>
-                                                        </li>
-                                                        <li><label><input type="checkbox"><i></i><span>Don't give up the
-                                                                    fight.</span><a href='#'
-                                                                    class="ti-close"></a></label></li>
-                                                        <li><label><input type="checkbox" checked><i></i><span>Do
-                                                                    something else</span><a href='#'
-                                                                    class="ti-close"></a></label></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="px-4">
-                                                    <input type="text" class="tdl-new form-control"
-                                                        placeholder="Nhập mục mới và gõ 'Enter'">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container-fluid" style="padding-top: 0;">
-                <div class="card">
-                    <div class="card-header">
-                        <div data-toggle="collapse" data-target="#ttsk" aria-expanded="false" aria-controls="ttsk">
-                            <div class="card-title d-flex justify-content-between">
-                                <h4 class="mt-1">Truyền thông sự kiện</h4>
-                                <div class="progress ml-2" style="height: 30px; width: 200px">
-                                    <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="80"
-                                        aria-valuemin="0" aria-valuemax="100" style="font-size: 14px"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card-body collapse show border-top-1" id="ttsk">
-                        <div class="row">
-
-                            <div class="col-lg-4">
-                                <div class="card">
-                                    <!-- <div class ="card-header">
-                                <h4>Header</h3>
-                            </div> -->
-                                    <div class="card-body">
-                                        <div data-toggle="collapse" data-target="#bfEven" aria-expanded="false"
-                                            aria-controls="bfEven">
-                                            <div class="card-title d-flex justify-content-between">
-                                                <h4>Trước sự kiện</h4>
-                                                <div class="progress ml-2" style="height: 30px; width: 200px">
-                                                    <div class="progress-bar progress-bar-striped" role="progressbar"
-                                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                                        style="font-size: 14px"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="todo-list collapse show border-top-1" id="bfEven">
-                                            <div class="tdl-holder">
-                                                <div class="tdl-content">
-                                                    <ul id="todo_list">
-                                                        <li><label><input type="checkbox"><i></i><span>Get up</span><a
-                                                                    href='#' class="ti-close"></a></label></li>
-                                                        <li><label><input type="checkbox" checked><i></i><span>Stand
-                                                                    up</span><a href='#' class="ti-close"></a></label>
-                                                        </li>
-                                                        <li><label><input type="checkbox"><i></i><span>Don't give up the
-                                                                    fight.</span><a href='#'
-                                                                    class="ti-close"></a></label></li>
-                                                        <li><label><input type="checkbox" checked><i></i><span>Do
-                                                                    something else</span><a href='#'
-                                                                    class="ti-close"></a></label></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="px-4">
-                                                    <input type="text" class="tdl-new form-control"
-                                                        placeholder="Nhập mục mới và gõ 'Enter'">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4">
-                                <div class="card">
-                                    <!-- <div class ="card-header">
-                                <h4>Header</h3>
-                            </div> -->
-                                    <div class="card-body">
-                                        <div data-toggle="collapse" data-target="#inEven" aria-expanded="false"
-                                            aria-controls="inEven">
-                                            <div class="card-title d-flex justify-content-between">
-                                                <h4>Trong sự kiện</h4>
-                                                <div class="progress ml-2" style="height: 30px; width: 200px">
-                                                    <div class="progress-bar progress-bar-striped" role="progressbar"
-                                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                                        style="font-size: 14px"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="todo-list collapse show border-top-1" id="inEven">
-                                            <div class="tdl-holder">
-                                                <div class="tdl-content">
-                                                    <ul id="todo_list">
-                                                        <li><label><input type="checkbox"><i></i><span>Get up</span><a
-                                                                    href='#' class="ti-close"></a></label></li>
-                                                        <li><label><input type="checkbox" checked><i></i><span>Stand
-                                                                    up</span><a href='#' class="ti-close"></a></label>
-                                                        </li>
-                                                        <li><label><input type="checkbox"><i></i><span>Don't give up the
-                                                                    fight.</span><a href='#'
-                                                                    class="ti-close"></a></label></li>
-                                                        <li><label><input type="checkbox" checked><i></i><span>Do
-                                                                    something else</span><a href='#'
-                                                                    class="ti-close"></a></label></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="px-4">
-                                                    <input type="text" class="tdl-new form-control"
-                                                        placeholder="Nhập mục mới và gõ 'Enter'">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4">
-                                <div class="card">
-                                    <!-- <div class ="card-header">
-                                <h4>Header</h3>
-                            </div> -->
-                                    <div class="card-body">
-                                        <div data-toggle="collapse" data-target="#afEven" aria-expanded="false"
-                                            aria-controls="afEven">
-                                            <div class="card-title d-flex justify-content-between">
-                                                <h4>Sau sự kiện</h4>
-                                                <div class="progress ml-2" style="height: 30px; width: 200px">
-                                                    <div class="progress-bar progress-bar-striped" role="progressbar"
-                                                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
-                                                        style="font-size: 14px"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="todo-list collapse show border-top-1" id="afEven">
-                                            <div class="tdl-holder">
-                                                <div class="tdl-content">
-                                                    <ul id="todo_list">
-                                                        <li><label><input type="checkbox"><i></i><span>Get up</span><a
-                                                                    href='#' class="ti-close"></a></label></li>
-                                                        <li><label><input type="checkbox" checked><i></i><span>Stand
-                                                                    up</span><a href='#' class="ti-close"></a></label>
-                                                        </li>
-                                                        <li><label><input type="checkbox"><i></i><span>Don't give up the
-                                                                    fight.</span><a href='#'
-                                                                    class="ti-close"></a></label></li>
-                                                        <li><label><input type="checkbox" checked><i></i><span>Do
-                                                                    something else</span><a href='#'
-                                                                    class="ti-close"></a></label></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="px-4">
-                                                    <input type="text" class="tdl-new form-control"
-                                                        placeholder="Nhập mục mới và gõ 'Enter'">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
     </div>
     <!--**********************************
             Content body end
@@ -715,20 +607,21 @@
 
     <!-- Modal confirm delete -->
     <div class="modal fade delete-modal">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog " role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Thông báo</h5>
                     <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">Bạn có chắc muốn xoá chiến dịch này?</div>
+                <div class="modal-body">Bạn có chắc muốn xoá mục này?</div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Xoá</button>
                 </div>
             </div>
         </div>
     </div>
+    
 
     <!-- Modal Add -->
     <div class="modal fade add-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
@@ -736,49 +629,33 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Thêm sự kiện</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Thêm Báo cáo</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <form method="post" enctype="multipart/form-data" id="form-add">
-                        <!-- <div class="username-form">
-                        <div class="input d-flex">
-                            <p class="title">Ảnh</p>
-                            <p class="text-danger">*</p>
-                        </div>
-                        <input class="form-control" type="file" name="image" id="addImage" placeholder="Ảnh">
-                    </div>
-                    <br></br> -->
                         <div class="d-flex mb-3">
-                            <div class="col-lg-6">
-                                <div class="d-flex  mb-1">
-                                    <h6 class="title">Tên sự kiện</h6>
+                            <div class="col-lg-12" id="input-ten-bao-cao">
+                                <div class="input d-flex mb-1">
+                                    <h6 class="title">Tên Báo cáo</h6>
                                     <h6 class="text-danger">*</h6>
                                 </div>
                                 <input class="form-control" type="text" name="title" id="addTitle"
-                                    placeholder="Tên dự án" required>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex mb-1">
-                                    <label for="pic">
-                                        <h6>Người phụ trách</h6>
-                                    </label>
-                                    <h6 class="text-danger">*</h6>
-                                </div>
-                                <select class="form-control" name="pic" id="pic" required required value="">
-                                    <option value="" selected disabled hidden>Người phụ trách</option>
-                                    <option value="Lan">Lan</option>
-                                    <option value="Ngan">Ngân</option>
-                                    <option value="Tung">Tùng</option>
-                                    <option value="Linh">Linh</option>
-                                    <option value="Nghia">Nghĩa</option>
+                                    placeholder="Tên Báo cáo" required>
                                 </select>
                             </div>
                         </div>
-
                         <div class="d-flex justify-content-between mb-3">
+                            <div class="col-lg-6">
+                                <div class="d-flex mb-1">
+                                    <h6 class="title">Ngày bắt đầu</h6>
+                                    <h6 class="text-danger">*</h6>
+                                </div>
+                                <input class="form-control" type="date" id="date" name="date" required required
+                                    value="">
+                            </div>
                             <div class="col-lg-6">
                                 <div class="d-flex mb-1">
                                     <h6 class="title">Ngày kết thúc</h6>
@@ -787,52 +664,38 @@
                                 <input class="form-control" type="date" id="date" name="date" required required
                                     value="">
                             </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex mb-1">
-                                    <h6 class="title">Quy trình</h6>
-                                    <h6 class="text-danger">*</h6>
-                                </div>
-                                <select class="form-control" name="pic" id="pic" required>
-                                    <option value="" selected disabled hidden>Chọn quy trình</option>
-                                    <option value="Booking">Booking phòng SK</option>
-                                    <option value="ThamDinh">Thẩm định</option>
-                                    <option value="PhatHanh">Họp đồng</option>
-                                    <option value="ThanhToan">Thanh toán</option>
-                                </select>
-                            </div>
                         </div>
 
-                        <!-- <div class="d-flex justify-content-between mb-3">
-                            <div class="col-lg-6">
-                                <div class="d-flex mb-1">
-                                    <h6 class="title">Ngân sách được duyệt</h6>
-                                    <h6 class="text-danger">*</h6>
-                                </div>
-                                <input class="form-control" type="text" name="deposit" id="addContent"
-                                    placeholder="Ngân sách" required required value="">
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex mb-1">
-                                    <h6 class="title">Ngân sách triển khai</h6>
-                                    <h6 class="text-danger">*</h6>
-                                </div>
-                                <input class="form-control" type="text" name="deposit" id="addContent"
-                                    placeholder="Ngân sách" required required value="">
-                            </div>
-
-                        </div>
                         <div class="d-flex justify-content-between mb-3">
-                            <div class="col-lg-12">
+                            <div class="col-lg-6">
                                 <div class="d-flex mb-1">
-                                    <h6 class="title">Deadline</h6>
-                                    <h6 class="text-danger">*</h6>
+                                    <h6 class="title">Số Post</h6>
+                                    <!-- <h6 class="text-danger">*</h6> -->
                                 </div>
-                                <input class="form-control" type="date" id="date" name="date" required required
+                                <input class="form-control" type="number" id="date" name="post" placeholder="Số Post" required required
                                     value="">
                             </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex mb-1">
+                                    <h6 class="title">Số Clip</h6>
+                                    <!-- <h6 class="text-danger">*</h6> -->
+                                </div>
+                                <input class="form-control" type="number" id="date" name="clip" placeholder="Số Clip" required required
+                                    value="">
+                            </div>
+                        </div>
 
-                        </div> -->
-                        <div class="d-flex justify-content-between">
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="col-lg-12">
+                                <div class="input d-flex mb-1">
+                                    <h6 class="title">Link Post & Clip</h6>
+                                    <!-- <h6 class="text-danger">*</h6> -->
+                                </div>
+                                <input class="form-control" type="text" id="date" name="link" required placeholder="Link Post & Clip" required value="">
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-between mb-3">
                             <div class="col-lg-12">
                                 <div class="input d-flex mb-1">
                                     <h6 class="title">Ghi chú</h6>
@@ -840,6 +703,16 @@
                                 </div>
                                 <textarea class="form-control" type="text" name="note" id="addContent"
                                     placeholder="Ghi chú"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <div class="col-lg-12">
+                                <div class="input d-flex mb-1">
+                                    <h6 class="title">Hạn báo cáo</h6>
+                                    <h6 class="text-danger">*</h6>
+                                </div>
+                                <input class="form-control" type="datetime-local" id="birthdaytime" name="birthdaytime">
                             </div>
                         </div>
                     </form>
@@ -857,7 +730,7 @@
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Cập nhật sự kiện</h5>
+                    <h5 class="modal-title" id="exampleModalLongTitle">Cập nhật Báo cáo</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -865,33 +738,25 @@
                 <div class="modal-body">
                     <form method="post" enctype="multipart/form-data" id="form-add">
                         <div class="d-flex mb-3">
-                            <div class="col-lg-6">
-                                <div class="d-flex  mb-1">
-                                    <h6 class="title">Tên sự kiện</h6>
+                            <div class="col-lg-12" id="input-ten-bao-cao">
+                                <div class="input d-flex mb-1">
+                                    <h6 class="title">Tên Báo cáo</h6>
                                     <h6 class="text-danger">*</h6>
                                 </div>
                                 <input class="form-control" type="text" name="title" id="addTitle"
-                                    placeholder="Tên dự án" required>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="d-flex mb-1">
-                                    <label for="pic">
-                                        <h6>Người phụ trách</h6>
-                                    </label>
-                                    <h6 class="text-danger">*</h6>
-                                </div>
-                                <select class="form-control" name="pic" id="pic" required required value="">
-                                    <option value="" selected disabled hidden>Người phụ trách</option>
-                                    <option value="Lan">Lan</option>
-                                    <option value="Ngan">Ngân</option>
-                                    <option value="Tung">Tùng</option>
-                                    <option value="Linh">Linh</option>
-                                    <option value="Nghia">Nghĩa</option>
+                                    placeholder="Tên Báo cáo" required>
                                 </select>
                             </div>
                         </div>
-
                         <div class="d-flex justify-content-between mb-3">
+                            <div class="col-lg-6">
+                                <div class="d-flex mb-1">
+                                    <h6 class="title">Ngày bắt đầu</h6>
+                                    <h6 class="text-danger">*</h6>
+                                </div>
+                                <input class="form-control" type="date" id="date" name="date" required required
+                                    value="">
+                            </div>
                             <div class="col-lg-6">
                                 <div class="d-flex mb-1">
                                     <h6 class="title">Ngày kết thúc</h6>
@@ -900,52 +765,38 @@
                                 <input class="form-control" type="date" id="date" name="date" required required
                                     value="">
                             </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mb-3">
                             <div class="col-lg-6">
                                 <div class="d-flex mb-1">
-                                    <h6 class="title">Quy trình</h6>
-                                    <h6 class="text-danger">*</h6>
+                                    <h6 class="title">Số Post</h6>
+                                    <!-- <h6 class="text-danger">*</h6> -->
                                 </div>
-                                <select class="form-control" name="pic" id="pic" required>
-                                    <option value="" selected disabled hidden>Chọn quy trình</option>
-                                    <option value="Booking">Booking phòng SK</option>
-                                    <option value="ThamDinh">Thẩm định</option>
-                                    <option value="PhatHanh">Họp đồng</option>
-                                    <option value="ThanhToan">Thanh toán</option>
-                                </select>
+                                <input class="form-control" type="number" id="date" name="post" placeholder="Số Post" required required
+                                    value="">
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex mb-1">
+                                    <h6 class="title">Số Clip</h6>
+                                    <!-- <h6 class="text-danger">*</h6> -->
+                                </div>
+                                <input class="form-control" type="number" id="date" name="clip" placeholder="Số Clip" required required
+                                    value="">
                             </div>
                         </div>
 
-                        <!-- <div class="d-flex justify-content-between mb-3">
-                        <div class="col-lg-6">
-                            <div class="d-flex mb-1">
-                                <h6 class="title">Ngân sách được duyệt</h6>
-                                <h6 class="text-danger">*</h6>
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="col-lg-12">
+                                <div class="input d-flex mb-1">
+                                    <h6 class="title">Link Post & Clip</h6>
+                                    <!-- <h6 class="text-danger">*</h6> -->
+                                </div>
+                                <input class="form-control" type="text" id="date" name="link" required placeholder="Link Post & Clip" required value="">
                             </div>
-                            <input class="form-control" type="text" name="deposit" id="addContent"
-                                placeholder="Ngân sách" required required value="">
                         </div>
-                        <div class="col-lg-6">
-                            <div class="d-flex mb-1">
-                                <h6 class="title">Ngân sách triển khai</h6>
-                                <h6 class="text-danger">*</h6>
-                            </div>
-                            <input class="form-control" type="text" name="deposit" id="addContent"
-                                placeholder="Ngân sách" required required value="">
-                        </div>
-
-                    </div>
-                    <div class="d-flex justify-content-between mb-3">
-                        <div class="col-lg-12">
-                            <div class="d-flex mb-1">
-                                <h6 class="title">Deadline</h6>
-                                <h6 class="text-danger">*</h6>
-                            </div>
-                            <input class="form-control" type="date" id="date" name="date" required required
-                                value="">
-                        </div>
-
-                    </div> -->
-                        <div class="d-flex justify-content-between">
+                        
+                        <div class="d-flex justify-content-between mb-3">
                             <div class="col-lg-12">
                                 <div class="input d-flex mb-1">
                                     <h6 class="title">Ghi chú</h6>
@@ -953,6 +804,16 @@
                                 </div>
                                 <textarea class="form-control" type="text" name="note" id="addContent"
                                     placeholder="Ghi chú"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <div class="col-lg-12">
+                                <div class="input d-flex mb-1">
+                                    <h6 class="title">Hạn báo cáo</h6>
+                                    <h6 class="text-danger">*</h6>
+                                </div>
+                                <input class="form-control" type="datetime-local" id="birthdaytime" name="birthdaytime">
                             </div>
                         </div>
                     </form>
@@ -966,44 +827,65 @@
         </div>
     </div>
 
-
-    <!--**********************************
-        Modal wrapper end
-    ***********************************-->
-
     <!--**********************************
         Scripts
     ***********************************-->
     <script>
-        $(document).ready(function () {
-            const show_percent = true;
-            var progressBars = $(".progress-bar");
-            for (i = 0; i < progressBars.length; i++) {
-                var progress = $(progressBars[i]).attr("aria-valuenow");
-                $(progressBars[i]).width(progress + "%");
-                if (show_percent) {
-                    $(progressBars[i]).text(progress + "%");
-                }
-                if (progress >= 80 && progress <= 100) {
-                    $(progressBars[i]).addClass("bg-success");
 
-                } else if (progress >= 50 && progress < 80) {
-                    $(progressBars[i]).addClass("bg-warning");
-                } else if (progress >= 20 && progress < 50) {
-                    $(progressBars[i]).addClass("bg-info");
+
+
+
+        // Set màu label %
+        $(document).ready(function () {
+            var rateField = $(".rating-field");
+            for (i = 0; i < rateField.length; i++) {
+                $(rateField[i]).css("color", "black");
+                var text = $(rateField[i]).html();
+                var rateFieldInt = parseInt(text.substring(0, text.length-1));
+                if (rateFieldInt < 50) {
+                    $(rateField[i]).addClass("bg-danger");
+                } else if (rateFieldInt >= 50 && rateFieldInt <= 70) {
+                    $(rateField[i]).addClass("bg-warning");
                 } else {
-                    $(progressBars[i]).addClass("bg-danger");
-                    $(progressBars[i]).css("color", "black");
+                    $(rateField[i]).addClass("bg-success");
                 }
             }
         });
 
-        function Delete() {
-            return confirm("Bạn có chắc muốn xoá chiến dịch này?");
-        }
+        // Set màu text
+        $(document).ready(function () {
+            var rateFieldStr = $(".rating-field-str");
+            for (i = 0; i < rateFieldStr.length; i++) {
+                $(rateFieldStr[i]).css("color", "black");
+                var text = $(rateFieldStr[i]).html();
+                if (text == 'Chưa hiệu quả') {
+                    $(rateFieldStr[i]).addClass("bg-danger");
+                } else if (text == 'Hiệu quả TB') {
+                    $(rateFieldStr[i]).addClass("bg-warning");
+                } else if (text == 'Hiệu quả tốt'){
+                    $(rateFieldStr[i]).addClass("bg-success");
+                }
+            }
+        });
+
+        // Set màu ranking
+        $(document).ready(function () {
+            var rankingItem = $(".ranking-item");
+            for (i = 0; i < rankingItem.length; i++) {
+                $(rankingItem[i]).css("color", "black");
+                if (i < 15) {
+                    $(rankingItem[i]).addClass("bg-success");
+                } else if (i>=15 && i<30) {
+                    $(rankingItem[i]).addClass("bg-warning");
+                } else {
+                    $(rankingItem[i]).addClass("bg-danger");
+                }
+            }
+        });
+
 
     </script>
-
+    
     <script src="../plugins/common/common.min.js"></script>
     <script src="../js/custom.min.js"></script>
     <script src="../js/settings.js"></script>
@@ -1014,10 +896,6 @@
     <script src="../plugins/chart.js/Chart.bundle.min.js"></script>
     <!-- Circle pr.ogress -->
     <script src="../plugins/circle-progress/circle-progress.min.js"></script>
-    <!-- Datamap -.->
-    <script src="../plugins/d3v3/index.js"></script>
-    <script src="../plugins/topojson/topojson.min.js"></script>
-    <script src="../plugins/datamaps/datamaps.world.min.js"></script>
     <!-- Morrisjs .-->
     <script src="../plugins/raphael/raphael.min.js"></script>
     <script src="../plugins/morris/morris.min.js"></script>
