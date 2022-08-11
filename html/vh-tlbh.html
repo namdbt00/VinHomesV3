@@ -747,6 +747,7 @@
                                                                             <th>STT</th>
                                                                             <th>Hạng Mục</th>
                                                                             <th>Phụ trách</th>
+                                                                            <th>Nhà thầu</th>
                                                                             <th>Khối lượng </th>
                                                                             <th>Đơn vị</th>
                                                                             <th>Ngân sách được duyệt</th>
@@ -766,6 +767,7 @@
                                                                             <td><img src="./images/avatar/2.jpg"
                                                                                     class=" rounded-circle mr-3"
                                                                                     alt="">Lan</td>
+                                                                            <td>Abc</td>
                                                                             <td>iPhone X</td>
                                                                             <td>
                                                                                 <span>United States</span>
@@ -813,6 +815,7 @@
                                                                             <td><img src="./images/avatar/2.jpg"
                                                                                     class=" rounded-circle mr-3"
                                                                                     alt="">Lan</td>
+                                                                            <td>Abc</td>
                                                                             <td>Pixel 2</td>
                                                                             <td><span>Canada</span></td>
                                                                             <td>10.000.000</td>
@@ -1680,7 +1683,7 @@
                     </div>
                     <br></br> -->
                         <div class="d-flex mb-3">
-                            <div class="col-lg-12" id="input-dau-viec">
+                            <div class="col-lg-6" id="input-dau-viec">
                                 <div class="input d-flex mb-1">
                                     <h6 class="title">Đầu việc</h6>
                                     <h6 class="text-danger">*</h6>
@@ -1696,6 +1699,14 @@
                                     <!-- <option value="custom">Tuỳ chọn</option> -->
                                 </select>
                             </div>
+                            <div class="col-lg-6">
+                                <div class="d-flex  mb-1">
+                                    <h6 class="title">Hạng mục</h6>
+                                    <h6 class="text-danger">*</h6>
+                                </div>
+                                <input class="form-control" type="text" name="title" id="addTitle"
+                                    placeholder="Hạng mục" required>
+                            </div>
                             <div class="col-lg-6" style="visibility:hidden" id="input-custom-dau-viec">
                                 <div class="input d-flex mb-1">
                                     <h6 class="title">Tên Đầu việc</h6>
@@ -1709,11 +1720,11 @@
                         <div class="d-flex mb-3">
                             <div class="col-lg-6">
                                 <div class="d-flex  mb-1">
-                                    <h6 class="title">Hạng mục</h6>
+                                    <h6 class="title">Nhà thầu</h6>
                                     <h6 class="text-danger">*</h6>
                                 </div>
                                 <input class="form-control" type="text" name="title" id="addTitle"
-                                    placeholder="Hạng mục" required>
+                                    placeholder="Nhà thầu" required>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex mb-1">
@@ -1856,7 +1867,7 @@
                     </div>
                     <br></br> -->
                         <div class="d-flex mb-3">
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                                 <div class="d-flex  mb-1">
                                     <h6 class="title">Hạng mục</h6>
                                     <h6 class="text-danger">*</h6>
@@ -1864,7 +1875,7 @@
                                 <input class="form-control" type="text" name="title" id="addTitle"
                                     placeholder="Hạng mục" required required value="">
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                                 <div class="d-flex mb-1">
                                     <label for="pic">
                                         <h6>Người phụ trách</h6>
@@ -1879,6 +1890,14 @@
                                     <option value="Linh">Linh</option>
                                     <option value="Nghia">Nghĩa</option>
                                 </select>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="d-flex  mb-1">
+                                    <h6 class="title">Nhà thầu</h6>
+                                    <h6 class="text-danger">*</h6>
+                                </div>
+                                <input class="form-control" type="text" name="title" id="addTitle"
+                                    placeholder="Nhà thầu" required required value="">
                             </div>
                         </div>
                         <div class="d-flex justify-content-between mb-3">
