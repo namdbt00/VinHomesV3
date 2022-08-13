@@ -1533,13 +1533,26 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-between mb-3">
-                            <div class="col-lg-12">
+                            <div class="col-lg-4">
                                 <div class="d-flex mb-1">
                                     <h6 class="title">Ngân sách được duyệt</h6>
                                     <!-- <h6 class="text-danger">*</h6> -->
                                 </div>
-                                <input class="form-control" type="text" name="deposit" id="addContent"
-                                    placeholder="Ngân sách" required required value="">
+                                <input class="form-control" type="text" name="deposit" id="totalBudget" value="0" onchange=changeTotalBudget() onkeyup=addDotInput(this)>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="d-flex mb-1">
+                                    <h6 class="title">Ngân sách triển khai</h6>
+                                    <!-- <h6 class="text-danger">*</h6> -->
+                                </div>
+                                <input class="form-control" type="text" name="deposit" id="usedBudget" disabled value="0">
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="d-flex mb-1">
+                                    <h6 class="title">Ngân sách còn lại</h6>
+                                    <!-- <h6 class="text-danger">*</h6> -->
+                                </div>
+                                <input class="form-control" type="text" name="deposit" id="remainBudget" disabled value="0">
                             </div>
                         </div>
                         <div class="d-flex justify-content-between mb-3">
@@ -1562,12 +1575,64 @@
                         </div>
 
                         <div class="d-flex justify-content-between mb-3">
-                            <div class="col-lg-12">
+                            <div class="col-lg-6">
                                 <h6>Các đầu việc</h6>
+                            </div>
+                            <div class="mr-3">
+                                <a id='delete-row-job' class="btn btn-warning text-white"><i class="fa fa-trash"></i></a>
+                                <a id="add-row-job" class="btn btn-google text-white"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="col-lg-12">
+                                <div class="table-responsive border-top-1">
+                                    <table class="table" id="table-job">
+                                        <thead>
+                                            <tr style="background-color: #E9ECEF">
+                                                <th colspan="2">Các đầu việc</th>
+                                                <th>Ngân sách phân bổ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr id="row0">
+                                                <td><input class="form-check" type="checkbox" checked="true" id="checkBox1" onclick=changeCheckBox(this.id,this.checked)></td>
+                                                <td><input class="form-control" type="text" value="Phối cảnh cam 3D" id="job1"></td>
+                                                <td><input class="form-control budget" type="text" id="budget1" value="0" onchange=changeBudget() onkeyup=addDotInput(this)></td>
+                                            </tr>
+                                            <tr id="row1">
+                                                <td><input class="form-check" type="checkbox" checked="true" id="checkBox2" onclick=changeCheckBox(this.id,this.checked)></td>
+                                                <td><input class="form-control" type="text" value="Tổng mặt bằng" id="job2"></td>
+                                                <td><input class="form-control budget" type="text" id="budget2" value="0" onchange=changeBudget() onkeyup=addDotInput(this)></td>
+                                            </tr>
+                                            <tr id="row2">
+                                                <td><input class="form-check" type="checkbox" checked="true" id="checkBox3" onclick=changeCheckBox(this.id,this.checked)></td>
+                                                <td><input class="form-control" type="text" value="TVC Clip" id="job3"></td>
+                                                <td><input class="form-control budget" type="text" id="budget3" value="0" onchange=changeBudget() onkeyup=addDotInput(this)></td>
+                                            </tr>
+                                            <tr id="row3">
+                                                <td><input class="form-check" type="checkbox" checked="true" id="checkBox4" onclick=changeCheckBox(this.id,this.checked)></td>
+                                                <td><input class="form-control" type="text" value="Tài liệu bán hàng" id="job4"></td>
+                                                <td><input class="form-control budget" type="text" id="budget4" value="0" onchange=changeBudget() onkeyup=addDotInput(this)></td>
+                                            </tr>
+                                            <tr id="row4">
+                                                <td><input class="form-check" type="checkbox" checked="true" id="checkBox5" onclick=changeCheckBox(this.id,this.checked)></td>
+                                                <td><input class="form-control" type="text" value="Landing Page" id="job5"></td>
+                                                <td><input class="form-control budget" type="text" id="budget5" value="0" onchange=changeBudget() onkeyup=addDotInput(this)></td>
+                                            </tr>
+                                            <tr id="row5">
+                                                <td><input class="form-check" type="checkbox" checked="true" id="checkBox6" onclick=changeCheckBox(this.id,this.checked)></td>
+                                                <td><input class="form-control" type="text" value="Logo nhận diện" id="job6"></td>
+                                                <td><input class="form-control budget" type="text" id="budget6" value="0" onchange=changeBudget() onkeyup=addDotInput(this)></td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="d-flex justify-content-between mb-3">
+
+                        <!-- <div class="d-flex justify-content-between mb-3">
                             <div class="col-lg-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="editCheckBoxCam3D">
@@ -1596,16 +1661,16 @@
 
                         <div class="d-flex justify-content-between mb-3">
                             <div class="col-lg-4">
-                                <input class="form-control" type="text" name="deposit" id="editBudgetCam3D"
-                                    placeholder="Ngân sách Cam 3D" required required value="" disabled>
+                                <input class="form-control" type="number" name="deposit" id="editBudgetCam3D"
+                                    placeholder="Ngân sách Cam 3D" value="0" disabled>
                             </div>
                             <div class="col-lg-4">
-                                <input class="form-control" type="text" name="deposit" id="editBudgetTMB"
-                                    placeholder="Ngân sách TMB" required required value="" disabled>
+                                <input class="form-control" type="number" name="deposit" id="editBudgetTMB"
+                                    placeholder="Ngân sách TMB" value="0" disabled>
                             </div>
                             <div class="col-lg-4">
-                                <input class="form-control" type="text" name="deposit" id="editBudgetClip"
-                                    placeholder="Ngân sách Clip" required required value="" disabled>
+                                <input class="form-control" type="number" name="deposit" id="editBudgetClip"
+                                    placeholder="Ngân sách Clip" value="0" disabled>
                             </div>
                         </div>
 
@@ -1638,24 +1703,24 @@
 
                         <div class="d-flex justify-content-between" >
                             <div class="col-lg-4">
-                                <input class="form-control" type="text" name="deposit" id="editBudgetTLBH"
-                                    placeholder="Ngân sách TLBH" required required value="" disabled>
+                                <input class="form-control" type="number" name="deposit" id="editBudgetTLBH"
+                                    placeholder="Ngân sách TLBH" value="0" disabled>
                             </div>
                             <div class="col-lg-4">
-                                <input class="form-control" type="text" name="deposit" id="editBudgetLP"
-                                    placeholder="Ngân sách Landing Page" required required value="" disabled>
+                                <input class="form-control" type="number" name="deposit" id="editBudgetLP"
+                                    placeholder="Ngân sách Landing Page" value="0" disabled>
                             </div>
                             <div class="col-lg-4">
-                                <input class="form-control" type="text" name="deposit" id="editBudgetLogo"
-                                    placeholder="Ngân sách Logo" required required value="" disabled>
+                                <input class="form-control" type="number" name="deposit" id="editBudgetLogo"
+                                    placeholder="Ngân sách Logo" value="0" disabled>
                             </div>
-                        </div>
+                        </div> -->
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".delete-project-modal"
                         data-dismiss="modal">Xoá</button>
-                    <button type="button" class="btn btn-google" id="btn-edit">Cập nhật</button>
+                    <button type="button" class="btn btn-success text-white" id="btn-edit">Cập nhật</button>
                 </div>
             </div>
         </div>
@@ -2012,60 +2077,75 @@
     ***********************************-->
     <script>
 
-        // Thêm tên Đầu việc tuỳ chọn
-        $('#dau-viec').change(function () {
-            if ($(this).val() == "custom") {
-                $("#input-dau-viec").removeClass("col-lg-12");
-                $("#input-dau-viec").addClass("col-lg-6");
-                $("#input-custom-dau-viec").css("visibility", "visible");
-            } else {
-                $("#input-dau-viec").removeClass("col-lg-6");
-                $("#input-dau-viec").addClass("col-lg-12");
-                $("#input-custom-dau-viec").css("visibility", "hidden");
+        // Bật tắt CheckBox
+        function changeCheckBox(value, checked) {
+            var id = value.substring(value.length-1);
+            var job = "#job".concat(id);
+            var budget = "#budget".concat(id);
+            if(checked){
+                $(job).prop("disabled", false);
+                $(budget).prop("disabled", false);
+            } else{usedBudget
+                $(job).prop("disabled", true);
+                $(budget).prop("disabled", true);
             }
-        })
+            changeBudget();
+        }
 
-        // Thêm ngân sách khi Click đầu việc
-        $('#checkBoxCam3D').change(function () {
-            $("#checkBoxCam3D").is(":checked") ? $("#budgetCam3D").prop("disabled", false) : $("#budgetCam3D").prop("disabled", true);
-        })
-        $('#checkBoxTMB').change(function () {
-            $("#checkBoxTMB").is(":checked") ? $("#budgetTMB").prop("disabled", false) : $("#budgetTMB").prop("disabled", true);
-        })
-        $('#checkBoxClip').change(function () {
-            $("#checkBoxClip").is(":checked") ? $("#budgetClip").prop("disabled", false) : $("#budgetClip").prop("disabled", true);
-        })
-        $('#checkBoxTLBH').change(function () {
-            $("#checkBoxTLBH").is(":checked") ? $("#budgetTLBH").prop("disabled", false) : $("#budgetTLBH").prop("disabled", true);
-        })
-        $('#checkBoxLandingPage').change(function () {
-            $("#checkBoxLandingPage").is(":checked") ? $("#budgetLP").prop("disabled", false) : $("#budgetLP").prop("disabled", true);
-        })
-        $('#checkBoxLogo').change(function () {
-            $("#checkBoxLogo").is(":checked") ? $("#budgetLogo").prop("disabled", false) : $("#budgetLogo").prop("disabled", true);
-        })
+        // Thay đổi ngân sách Đầu việc
+        function changeBudget(){
+            var totalBudget = parseInt($("#totalBudget").val());
+            var usedBudget = 0;
+            var budget = $(".budget");
+            for(i = 0; i<budget.length; i++){
+                var money = $(budget[i]).val();
+                var checked = $("#checkBox".concat(i+1)).is(":checked");
+                if($("#checkBox".concat(i+1)).is(":checked"))
+                usedBudget += parseInt($(budget[i]).val().replaceAll(',', ''))
+            }
+            $("#usedBudget").val(usedBudget.toLocaleString());
+            $("#remainBudget").val((totalBudget - usedBudget).toLocaleString());
+        }
 
-        // Thêm ngân sách khi Sửa đầu việc
-        $('#editCheckBoxCam3D').change(function () {
-            $("#editCheckBoxCam3D").is(":checked") ? $("#editBudgetCam3D").prop("disabled", false) : $("#editBudgetCam3D").prop("disabled", true);
-        })
-        $('#editCheckBoxTMB').change(function () {
-            $("#editCheckBoxTMB").is(":checked") ? $("#editBudgetTMB").prop("disabled", false) : $("#editBudgetTMB").prop("disabled", true);
-        })
-        $('#editCheckBoxClip').change(function () {
-            $("#editCheckBoxClip").is(":checked") ? $("#editBudgetClip").prop("disabled", false) : $("#editBudgetClip").prop("disabled", true);
-        })
-        $('#editCheckBoxTLBH').change(function () {
-            $("#editCheckBoxTLBH").is(":checked") ? $("#editBudgetTLBH").prop("disabled", false) : $("#editBudgetTLBH").prop("disabled", true);
-        })
-        $('#editCheckBoxLandingPage').change(function () {
-            $("#editCheckBoxLandingPage").is(":checked") ? $("#editBudgetLP").prop("disabled", false) : $("#editBudgetLP").prop("disabled", true);
-        })
-        $('#editCheckBoxLogo').change(function () {
-            $("#editCheckBoxLogo").is(":checked") ? $("#editBudgetLogo").prop("disabled", false) : $("#editBudgetLogo").prop("disabled", true);
-        })
+        // Cập nhật tổng tiền
+        function changeTotalBudget(){
+            $("#remainBudget").val((parseInt($("#totalBudget").val().replaceAll(',', '')) - parseInt($("#usedBudget").val().replaceAll(',', ''))).toLocaleString());
+        }
 
+        // Thêm đầu việc
+        $(document).ready(function () {
+            var i = 6;
+            $("#add-row-job").click(function () {
+                $('#table-job').append(
+                    '<tr id="row' + (i) + '">' +
+                    '<td> <input class="form-check" type="checkbox" checked="true" id="checkBox' + (i + 1) +  '" onclick=changeCheckBox(this.id,this.checked)></td>' +
+                    '<td> <input class="form-control" type="text" value="" placeholder="Nhập đầu việc" id="job' + (i + 1) + '" ></td>'+ 
+                    '<td> <input class="form-control budget" type="text" id="budget' + (i + 1) + '" value="0" onchange=changeBudget() onkeyup=addDotInput(this)></td>' +
+                    '</tr>')
+                i++;
+            });
 
+            // Xoá đầu việc
+            $("#delete-row-job").click(function () {
+                if (i > 1) {
+                    $("#row" + (i - 1)).remove();
+                    i--;
+                }
+            });
+        });
+
+        // Thêm dấu , vào Input
+        function addDotInput(input) {
+            // if(event.which >= 37 && event.which <= 40) return;
+            // format number
+            $(input).val(function(index, value) {
+                return value
+                .replace(/\D/g, "")
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                ;
+                });
+        }
+     
         // Set màu tình trạng
         $(document).ready(function () {
             const show_percent = true;
