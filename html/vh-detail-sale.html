@@ -8,8 +8,16 @@
     <title>Vinhomes Vùng 3 - Trang Quản trị Marketing Vinhomes</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../images/vinhomes_logo.svg">
+    <!-- Pignose Calender -->
+    <link href="../plugins/pg-calendar/css/pignose.calendar.min.css" rel="stylesheet">
+    <!-- Chartist -->
+    <link rel="stylesheet" href="../plugins/chartist/css/chartist.min.css">
+    <link rel="stylesheet" href="../plugins/chartist-plugin-tooltips/css/chartist-plugin-tooltip.css">
     <!-- Custom Stylesheet -->
     <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/css-custom.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </head>
 
@@ -40,7 +48,7 @@
         ***********************************-->
         <div class="nav-header">
             <div class="brand-logo">
-                <a href="vh-index.html" title="home">
+                <a href="index.html">
                     <b class="logo-abbr"><img src="../images/vinhomes_logo.svg" alt=""> </b>
                     <span class="logo-compact"><img src="../images/vinhomes_logo.svg" alt=""></span>
                     <span class="brand-title">
@@ -299,28 +307,16 @@
                             <i class="icon-note menu-icon"></i><span class="nav-text">Timeline truyền thông</span>
                         </a>
                     </li>
-                    <li class="nav-label">Báo cáo</li>
-                    <li>
-                        <a href="vh-bcdl-total.html" aria-expanded="false">
-                            <i class="icon-note menu-icon"></i><span class="nav-text">Tổng hợp</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="vh-list-bc.html" aria-expanded="false">
-                            <i class="icon-note menu-icon"></i><span class="nav-text">Danh sách báo cáo</span>
-                        </a>
-                    </li>
-                    <li class="nav-label">Thông tin</li>
                     <li>
                         <a href="vh-ttdl.html" aria-expanded="false">
-                            <i class="icon-note menu-icon"></i><span class="nav-text">Thông tin Đại lý</span>
+                            <i class="icon-user menu-icon"></i><span class="nav-text">Hồ sơ</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="vh-dl-list-sale.html" aria-expanded="false">
-                            <i class="icon-note menu-icon"></i><span class="nav-text">Danh sách Sales</span>
+                    <!-- <li>
+                        <a href="vh-bcdl.html"  aria-expanded="false">
+                            <i class="icon-note menu-icon"></i><span class="nav-text">Báo cáo Digital</span>
                         </a>
-                    </li>
+                    </li> -->
                     </li>
                 </ul>
             </div>
@@ -334,36 +330,195 @@
         ***********************************-->
         <div class="content-body">
 
-            <div class="row page-titles mx-0">
-                <div class="col p-md-0">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
-                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
-                    </ol>
+            <div class="container-fluid mt-3">
+                <div class="col-lg-12">
+
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-between mb-3">
+                                <div class="d-flex">
+                                    <h4 class="mt-2 mr-2">THÔNG TIN CÁ NHÂN</h4>
+                                    <span class="p-2" 
+                                    style="color: #7e9f93; border-color: #7e9f93; background-color: #d4eae2; border-radius: 4px;">#123456789</span>
+                                </div>
+                                <div class=" d-flex">
+                                    <!-- <h4 class="mt-1 mr-2">Link</h4> -->
+                                    <span class="p-2" style="color: #abae7f; border-color: #abae7f; background-color: #f4f4d9; border-radius: 4px;">
+                                        <a id="link-sale" href="sale.tailieuvinhomes.vn/123456789" target="blank">sale.tailieuvinhomes.vn/123456789</a>
+                                    </span>
+                                    <button class="btn btn-secondary ml-2" onclick="copyToCB()">
+                                        <i class="fa fa-copy color-white"></i>
+                                    </button>
+                                    
+                                </div>
+                            </div>
+                            
+                            
+                            <form method="post" enctype="multipart/form-data" id="form-add">
+                                <div class="d-flex mb-3">
+                                    <div class="col-lg-6" id="input-ten-bao-cao">
+                                        <div class="input d-flex mb-1">
+                                            <h6 class="title">Họ và tên</h6>
+                                            <h6 class="text-danger">*</h6>
+                                        </div>
+                                        <input class="form-control" type="text" name="title" id="addTitle"
+                                            placeholder="Họ và tên" value="Nguyễn Văn A" disabled>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="d-flex mb-1">
+                                            <h6 class="title">Số điện thoại</h6>
+                                            <h6 class="text-danger">*</h6>
+                                        </div>
+                                        <input class="form-control" type="number" id="date" name="date"  value="0123456789"
+                                            value=" "placeholder="Số điện thoại" disabled>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between mb-3">
+                                    <div class="col-lg-4">
+                                        <div class="d-flex mb-1">
+                                            <h6 class="title">Công ty</h6>
+                                            <h6 class="text-danger">*</h6>
+                                        </div>
+                                        <input class="form-control" type="text" id="date" name="post" placeholder="Công ty" 
+                                            value="AlphaReal" disabled>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="d-flex mb-1">
+                                            <h6 class="title">Chức danh</h6>
+                                            <h6 class="text-danger">*</h6>
+                                        </div>
+                                        <input class="form-control" type="text" id="date" name="date" 
+                                            value="Tổng giám đốc" placeholder="Chức danh" disabled>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="d-flex mb-1">
+                                            <h6 class="title">CMT/CCCD</h6>
+                                            <h6 class="text-danger">*</h6>
+                                        </div>
+                                        <input class="form-control" type="number" id="date" name="clip" placeholder="CMT/CCCD"
+                                            value="0123153156" disabled>
+                                    </div>
+                                </div>
+        
+                                <div class="d-flex justify-content-between mb-3">
+                                    
+                                </div>
+        
+                                <div class="d-flex justify-content-between mb-3">
+                                    <div class="col-lg-6 ">
+                                        <div class="input d-flex mb-1">
+                                            <h6 class="title">Link Facebook</h6>
+                                            <h6 class="text-danger">*</h6>
+                                        </div>
+                                        <input class="form-control" type="text" id="date" name="link" placeholder="Link Facebook" value="https://www.facebook.com/" disabled>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="input d-flex mb-1">
+                                            <h6 class="title">Link Messenger</h6>
+                                            <h6 class="text-danger">*</h6>
+                                        </div>
+                                        <input class="form-control" type="text" id="date" name="link" placeholder="Link Messenger" value="https://www.facebook.com/" disabled>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-lg-4">
+                                        <div class="input d-flex mb-1">
+                                            <h6 class="title">Link Zalo</h6>
+                                            <h6 class="text-danger">*</h6>
+                                        </div>
+                                        <input class="form-control" type="text" id="date" name="link" placeholder="Link Zalo" value="https://www.facebook.com/" disabled>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="input d-flex mb-1">
+                                            <h6 class="title">Link Viber</h6>
+                                            <h6 class="text-danger">*</h6>
+                                        </div>
+                                        <input class="form-control" type="text" id="birthdaytime" name="birthdaytime" placeholder="Link Viber" value="https://www.facebook.com/" disabled>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="input d-flex mb-1">
+                                            <h6 class="title">Link Youtube</h6>
+                                            <h6 class="text-danger">*</h6>
+                                        </div>
+                                        <input class="form-control" type="text" id="birthdaytime" name="birthdaytime" placeholder="Link Youtube" value="https://www.facebook.com/" disabled>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <div class="col p-0 d-flex justify-content-between mt-4 mb-3">
+                                <h4>CÁC THÀNH TÍCH</h4>
+                                <!-- <div class="btn-table">
+                                    <a id="add_row" class="btn btn-google text-white">Thêm</a>
+                                    <a id='delete_row' class="btn btn-danger text-white">Xoá</a>
+                                </div> -->
+                                <!-- <h6 style="font-style: italic;" id="tab-date">Tuần 2 tháng 7 (12/07-18/07)</h6> -->
+                            </div>
+
+                            <div class="digital-report">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-active mb-0" id="sale-table">
+                                        <thead>
+                                            <tr class="border-top-1">
+                                                <th class="col-lg-1">STT</th>
+                                                <th class="col-lg-3">Tên</th>
+                                                <th class="col-lg-3">Mô tả</th>
+                                                <th class="col-lg-5">Ảnh</th>
+                                                <!-- <th class="col-lg-1"><button class="btn btn-primary" id="add_row"><i class="fa fa-plus"></i></button></th> -->
+                                            </tr>
+                                        </thead>
+                                        <tbody id="digital-report-table-body">
+                                            <tr id="achive0">
+                                                <td>1</td>
+                                                <td>Best Sale tháng 7</td>
+                                                <td>abcd</td>
+                                                <td>abcd</td>
+                                                <!-- <td><button class="btn btn-warning color-white" id="del-1" onclick=""><i class="fa fa-trash"></i></button></td>  -->
+                                            </tr>
+                                            <tr id="achive1">
+                                                <td>2</td>
+                                                <td>Best Sale tháng 7</td>
+                                                <td>abcd</td>
+                                                <td>abcd</td>
+                                                <!-- <td><button class="btn btn-warning color-white" id="del-1" onclick=""><i class="fa fa-trash"></i></button></td>  -->
+                                            </tr>
+                                            <tr id="achive2">
+                                                <td>3</td>
+                                                <td>Best Sale tháng 7</td>
+                                                <td>abcd</td>
+                                                <td>abcd</td>
+                                                <!-- <td><button class="btn btn-warning color-white" id="del-1" onclick=""><i class="fa fa-trash"></i></button></td>  -->
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <a class="btn btn-google pull-right mt-3 text-white" href="vh-ttsale.html" id="btn-update" type="submit"><i class="fa fa-gear mr-2"></i>Chỉnh sửa thông tin</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <!-- row -->
-
-            <div class="container-fluid">
-
-            </div>
-            <!-- #/ container -->
         </div>
-        <!--**********************************
+    </div>
+    <!--**********************************
             Content body end
         ***********************************-->
 
 
-        <!--**********************************
+    <!--**********************************
             Footer start
         ***********************************-->
-        <div class="footer">
-            <div class="copyright">
-                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a>
-                    2018</p>
-            </div>
+    <div class="footer">
+        <div class="copyright">
+            <p>Copyright &copy; Designed & Developed by <a href="https://tailieuvinhomes.com/" target="blank">Vinhomes
+                    Vùng 3 </a> 2022
+            </p>
         </div>
-        <!--**********************************
+    </div>
+    <!--**********************************
             Footer end
         ***********************************-->
     </div>
@@ -371,15 +526,96 @@
         Main wrapper end
     ***********************************-->
 
+    <!-- Modal copy -->
+    <div class="modal fade copy-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Thông báo</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">Đã copy vào ClipBoard</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success text-white" data-dismiss="modal">Đồng ý</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--**********************************
         Scripts
     ***********************************-->
+    <script>
+        // Validate form tạo Chiến dịch
+        $("#btn-update").click(function () {
+            if ($("#nameDL").val() == '')
+                alert('Không được bỏ trống tên');
+            else if ($("#numSale").val() == '')
+                alert('Không được bỏ trống số lượng Sale');
+            else if ($("#listSale").val() == '')
+                alert('Không được bỏ trống danh sách Sale');
+            else if ($("#fanpage").val() == '')
+                alert('Không được bỏ trống Fanpage');
+            else if ($("#youtube").val() == '')
+                alert('Không được bỏ trống kênh Youtube');
+            else if ($("#image").val() == '')
+                alert('Không được bỏ trống ảnh');       
+        })
+
+        $(document).ready(function () {
+            var i = 1;
+            var impressionTotal = $("input[name='impression-0']").val();
+            $("#add_row").click(function () {
+                $('#sale-table').append(
+                    '<tr id="achive' + (i) + '">' +
+                    '<td>' + (i + 1) + '</td>' +
+                    '<td> <input class="form-control" type="text" placeholder="Tên" id="name' + (i + 1) + '"></td>' +
+                    '<td> <input class="form-control" type="text" placeholder="Mô tả" id="desc' + (i + 1) + '"></td>' +
+                    '<td> <input class="form-control" type="file" placeholder="Ảnh" id="image' + (i + 1) + '"></td>' +
+                    // '<td> <button class="btn btn-warning color-white" id="del-' + (i + 1) + '"><i class="fa fa-trash"></i></button></td>' +
+                    '</tr>')
+                i++;
+            });
+
+            $("#delete_row").click(function () {
+                if (i > 0) {
+                    $("#achive" + (i - 1)).remove();
+                    i--;
+                }
+            });
+        })
+
+        function copyToCB() {
+            navigator.clipboard.writeText($('#link-sale').html());
+            $(".copy-modal").modal("show");
+        }
+
+        
+    </script>
+
     <script src="../plugins/common/common.min.js"></script>
     <script src="../js/custom.min.js"></script>
     <script src="../js/settings.js"></script>
     <script src="../js/gleek.js"></script>
     <script src="../js/styleSwitcher.js"></script>
 
+    <!-- Chartjs -->
+    <script src="../plugins/chart.js/Chart.bundle.min.js"></script>
+    <!-- Circle pr.ogress -->
+    <script src="../plugins/circle-progress/circle-progress.min.js"></script>
+    <!-- Morrisjs .-->
+    <script src="../plugins/raphael/raphael.min.js"></script>
+    <script src="../plugins/morris/morris.min.js"></script>
+    <!-- Pignose C.alender -->
+    <script src="../plugins/moment/moment.min.js"></script>
+    <script src="../plugins/pg-calendar/js/pignose.calendar.min.js"></script>
+    <!-- ChartistJ.S -->
+    <script src="../plugins/chartist/js/chartist.min.js"></script>
+    <script src="../plugins/chartist-plugin-tooltips/js/chartist-plugin-tooltip.min.js"></script>
+
+
+    <script src="../js/dashboard/dashboard-1.js"></script>
 </body>
 
 </html>
